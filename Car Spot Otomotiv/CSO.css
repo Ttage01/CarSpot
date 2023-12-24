@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 0;
+    padding: 1em 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.car {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    max-width: 3000px;
+    position: relative; /* Overlay text'in konumunu belirlemek için */
+    overflow: hidden; /* Resmin dışına taşan kısımları gizle */
+}
+
+.car img {
+    width: 320px;
+    height: 320px;
+    position: fit;
+    transition: filter 0.3s ease-in-out; /* Geçiş efekti ekle */
+}
+
+.car:hover img {
+    filter: blur(5px); /* %70 blurlaştırma */
+}
+
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 140px;
+    left: 50px;
+    width: 70%; /* Resmin genişliği kadar */
+    height: 20%; /* Resmin yüksekliği kadar */
+    background-color: #333; /* Kutu rengi */
+    opacity: 0; /* Başlangıçta görünmez yapın */
+    transition: opacity 0.3s ease-in-out; /* Geçiş efekti ekle */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Başlangıçta görünmez yapın */
+    transition: opacity 0.3s ease-in-out; /* Geçiş efekti ekle */
+}
+
+.car:hover .overlay {
+    opacity: 1;
+}
+
+.car:hover .overlay-text {
+    opacity: 1;
+    font-weight: bold; /* Metni kalın yap */
+    font-size: 110%; /* Metni biraz büyüt */
+    color: white; /* Metin rengi beyaz yap */
+}
+
+.car {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    max-width: 3000px;
+    position: relative; /* Overlay text'in konumunu belirlemek için */
+    overflow: hidden; /* Resmin dışına taşan kısımları gizle */
+    flex: 1 0 calc(25% - 20px); /* İki yan yana gelecek car divinin genişliği ve aralarındaki boşluğu belirle */
+}
+
+.AnaLogo {
+    margin-left: -1136px;
+    margin-top: -19px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    line-height: 3;
+}
+
+img {
+    border: 3px solid black;
+}
+
+b {
+    font-size: xx-large;
+}
+nav {
+    margin-top: 10px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ddd;
+}
